@@ -175,7 +175,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 let cubeNode = SCNNode(geometry: cube)
                 
-                print("Result Node: \(result.node.name!)")
+                
                 
                 result.node.addChildNode(cubeNode)
 //                sceneView.scene.rootNode.addChildNode(cubeNode)

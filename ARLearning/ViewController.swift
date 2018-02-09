@@ -146,7 +146,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 result.node.isHidden = true
             }
             
-            if myCubes.contains(result.node) || result.node.name == "ball" {
+            if myCubes.contains(result.node) || result.node.parent!.name == "ball" {
                 currentCubeNode = result.node
                 
                 startPosition = result.worldCoordinates

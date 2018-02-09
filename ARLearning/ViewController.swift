@@ -21,7 +21,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var currentCubeNode: SCNNode?
     var fieldNode: SCNNode?
-    let cube = SCNSphere(radius: 0.15)//SCNBox(width: 0.15, height: 0.15, length: 0.15, chamferRadius: 0)
+    let cube = SCNSphere(radius: 0.15)
+    let sphere = SCNSphere(radius: 0.075)
+    //SCNBox(width: 0.15, height: 0.15, length: 0.15, chamferRadius: 0)
     
     var startTouchTime: TimeInterval!
     var endTouchTime: TimeInterval!
@@ -191,6 +193,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 let cubePhysicsShape = SCNPhysicsShape(geometry: cube, options: nil)
                 
                 cubeNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: cubePhysicsShape)
+                cubeNode.physicsBody?.rollingFriction = 0.5
                 myCubes.insert(cubeNode)
 
             }

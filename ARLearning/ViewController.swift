@@ -105,9 +105,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        let timeDifference = endTouchTime - startTouchTime
         
         let impulseVector = SCNVector3(
-            ((endPosition?.x)! - (startPosition?.x)!) * 10,
-            ((endPosition?.y)! - (startPosition?.y)!) * 10,
-            ((endPosition?.z)! - (startPosition?.z)!) * 10)
+            ((endingPosition.x) - (startingPosition.x)) * 10,
+            ((endingPosition.y) - (startingPosition.y)) * 10,
+            ((endingPosition.z) - (startingPosition.z)) * 10)
         
 //        print("the force is \(impulseVector)")
         cubeNode.physicsBody?.applyForce(impulseVector, asImpulse: true)
